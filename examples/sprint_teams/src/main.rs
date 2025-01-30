@@ -1,10 +1,16 @@
 use rand::Rng;
 // TODO: HELP ME-Jack Frambes
+#[derive(Clone)]
 struct SprintTeam {
     name: String,
     spaces_remaining: u8,
-} 
+}
 
+#[derive(Clone)]
+struct Student {
+    name: String,
+    team: SprintTeam,
+}
 fn main() {
     let students = [
         "Simon William Benjamin",
@@ -47,21 +53,22 @@ fn main() {
     let mut teams = [sprint_team_a, sprint_team_b, sprint_team_c];
 
     let mut rng = rand::thread_rng();
-
+    let mut s: Vec<Student> = Vec::new();
     for student in students {
         loop {
             let random_number = rng.gen_range(0..teams.len());
             let team = &mut teams[random_number];
             if team.spaces_remaining > 0 {
                 team.spaces_remaining -= 1;
-                println!(
-                    "Student: {:<25}  Team: {:<10}  Remaining Spaces: {}",
-                    student,
-                    team.name,
-                    team.spaces_remaining
-                );
+                s.push(Student { name: student.parse().unwrap(), team: team.clone() });
                 break;
             }
         }
+    }
+    s.sort_by_key(|student| student.team.name.clone());
+
+    println!("\nSorted Student List:");
+    for student in s {
+        println!("Student: {:<25} Team: {}", student.name, student.team.name);
     }
 }
