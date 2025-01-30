@@ -55,7 +55,7 @@ fn main() {
             if team.spaces_remaining > 0 {
                 team.spaces_remaining -= 1;
                 println!(
-                    "Student: {:<30}  Team: {:<10}  Remaining Spaces: {}",
+                    "Student: {:<25}  Team: {:<10}  Remaining Spaces: {}",
                     student,
                     team.name,
                     team.spaces_remaining
