@@ -1,8 +1,10 @@
+// TODO: RTO-4
 use rand::Rng;
 
 struct SprintTeam {
     name: String,
     spaces_remaining: u8,
+    team_color: String,
 } 
 
 fn main() {
@@ -32,16 +34,19 @@ fn main() {
     let sprint_team_a  = SprintTeam { 
         name: "Team A".to_string(), 
         spaces_remaining: 7,
+        team_color: "Blue".to_string(),
     };
 
     let sprint_team_b = SprintTeam { 
         name: "Team B".to_string(), 
         spaces_remaining: 7,
+        team_color: "Yellow".to_string(),
     };
 
     let sprint_team_c = SprintTeam { 
         name: "Team C".to_string(), 
         spaces_remaining: 6,
+        team_color: "Pink".to_string(),
     };
 
     let mut teams = [sprint_team_a, sprint_team_b, sprint_team_c];
@@ -55,9 +60,10 @@ fn main() {
             if team.spaces_remaining > 0 {
                 team.spaces_remaining -= 1;
                 println!(
-                    "Student: {:<25}  Team: {:<10}  Remaining Spaces: {}",
+                    "Student: {:<25}  Team: {:<10}  Color: {:<6}  Remaining Spaces: {}",
                     student,
                     team.name,
+                    team.team_color,
                     team.spaces_remaining
                 );
                 break;
