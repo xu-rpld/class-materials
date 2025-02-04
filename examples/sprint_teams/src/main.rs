@@ -1,3 +1,5 @@
+// Julia's comment for assignment 4
+
 use rand::Rng;
 
 struct SprintTeam {
