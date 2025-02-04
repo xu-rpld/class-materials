@@ -1,3 +1,4 @@
+//TODO: RTO-4 Khanh Tran
 use rand::Rng;
 
 struct SprintTeam {
