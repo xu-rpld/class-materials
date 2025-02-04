@@ -56,7 +56,7 @@ fn main() {
                 team.spaces_remaining -= 1;
                 println!(
                     "Student: {:<25}  Team: {:<10}  Remaining Spaces: {}",
-                    student,
+                    format!("{}!", student), //This will append an "!" to the student name
                     team.name,
                     team.spaces_remaining
                 );
