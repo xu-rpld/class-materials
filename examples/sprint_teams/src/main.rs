@@ -4,6 +4,7 @@ use rand::Rng;
 struct SprintTeam {
     name: String,
     spaces_remaining: u8,
+    members: Vec<String>,
 } 
 
 fn main() {
@@ -29,40 +30,44 @@ fn main() {
         "Khanh Tran",
         "Alex K Welch",
     ];
-  
-    let sprint_team_a  = SprintTeam { 
-        name: "Team A".to_string(), 
-        spaces_remaining: 7,
-    };
-
-    let sprint_team_b = SprintTeam { 
-        name: "Team B".to_string(), 
-        spaces_remaining: 7,
-    };
-
-    let sprint_team_c = SprintTeam { 
-        name: "Team C".to_string(), 
-        spaces_remaining: 6,
-    };
-
-    let mut teams = [sprint_team_a, sprint_team_b, sprint_team_c];
+    let mut teams = vec![
+        SprintTeam {
+            name: "Team A".to_string(),
+            spaces_remaining: 7,
+            members: Vec::new(),
+        },
+        SprintTeam {
+            name: "Team B".to_string(),
+            spaces_remaining: 7,
+            members: Vec::new(),
+        },
+        SprintTeam {
+            name: "Team C".to_string(),
+            spaces_remaining: 7,
+            members: Vec::new(),
+        },
+    ];
+    
 
     let mut rng = rand::thread_rng();
 
-    for student in students {
+    for student in students.iter() {
         loop {
             let random_number = rng.gen_range(0..teams.len());
             let team = &mut teams[random_number];
             if team.spaces_remaining > 0 {
                 team.spaces_remaining -= 1;
-                println!(
-                    "Student: {:<25}  Team: {:<10}  Remaining Spaces: {}",
-                    student,
-                    team.name,
-                    team.spaces_remaining
-                );
+                team.members.push(student.to_string());
                 break;
             }
         }
+    }
+
+    for team in &teams {
+        println!("{}:", team.name);
+        for member in &team.members {
+            println!("  - {}", member);
+        }
+        println!();
     }
 }
