@@ -1,3 +1,4 @@
+//this is Samuel Fortin's interesting change
 use rand::Rng;
 
 struct SprintTeam {
