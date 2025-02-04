@@ -28,21 +28,24 @@ fn main() {
         "Kyle R Totorica",
         "Khanh Tran",
         "Alex K Welch",
+        "Jill avery stonehill",
+        "Daniel roberto june",
+        "Barry james coloradti"
     ];
   
     let sprint_team_a  = SprintTeam { 
         name: "Team A".to_string(), 
-        spaces_remaining: 7,
+        spaces_remaining: 8,
     };
 
     let sprint_team_b = SprintTeam { 
         name: "Team B".to_string(), 
-        spaces_remaining: 7,
+        spaces_remaining: 8,
     };
 
     let sprint_team_c = SprintTeam { 
         name: "Team C".to_string(), 
-        spaces_remaining: 6,
+        spaces_remaining: 7,
     };
 
     let mut teams = [sprint_team_a, sprint_team_b, sprint_team_c];
