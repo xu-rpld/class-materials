@@ -6,6 +6,8 @@ struct SprintTeam {
 } 
 
 fn main() {
+    // TODO: RTO-4
+
     let students = [
         "Simon William Benjamin",
         "Julian A Brito-Hanley",
