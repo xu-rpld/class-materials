@@ -7,6 +7,7 @@ struct SprintTeam {
 
 fn main() {
     // TODO: RTO-4
+    println!("This is my interesting modification: print statements!!!");
 
     let students = [
         "Simon William Benjamin",
