@@ -6,6 +6,7 @@ struct SprintTeam {
 } 
 // hello - Simon
 fn main() {
+    println!("I made an interesting modification!");
     let students = [
         "Simon William Benjamin",
         "Julian A Brito-Hanley",
@@ -47,6 +48,7 @@ fn main() {
     let mut teams = [sprint_team_a, sprint_team_b, sprint_team_c];
 
     let mut rng = rand::thread_rng();
+
 
     for student in students {
         loop {
