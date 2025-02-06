@@ -4,7 +4,7 @@ use rand::Rng;
 struct SprintTeam {
     name: String,
     spaces_remaining: u8,
-} 
+}
 
 fn main() {
     let students = [
@@ -49,6 +49,9 @@ fn main() {
 
     let mut rng = rand::thread_rng();
 
+    //storing team C
+    let mut team_c_members: Vec<&str> = Vec::new();
+
     for student in students {
         loop {
             let random_number = rng.gen_range(0..teams.len());
@@ -61,8 +64,17 @@ fn main() {
                     team.name,
                     team.spaces_remaining
                 );
+                if team.name == "Team C"{
+                    team_c_members.push(student);
+                }
                 break;
             }
         }
     }
+    //print my team names, team C
+    println!("Students on Team C: ");
+    for student in team_c_members{
+            println!("{}", student);
+        }
+    
 }
