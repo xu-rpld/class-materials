@@ -1,8 +1,32 @@
 fn main() {
-    println!("This old man, he played one,\nBut he needs to play more!!");
+    let mut count = 1;
+
+
+    while count <= 10 {
+        let bodypart = match count {
+            1 => "thumb",
+            2 => "shoe",
+            3 => "knee",
+            4 => "door",
+            5 => "hive",
+            6 => "sticks",
+            7 => "heaven",
+            8 => "gate",
+            9 => "spine",
+            10 => "once again",
+            _ => "",
+        };
+    println!("This old man, he played {count},");
+    println!("He played knick-knack on my {bodypart};");
+    println!("With a knick-knack paddywhack,");
+    println!("Give the dog a bone,");
+    println!("This old man came rolling home.\n");
+    count += 1;
+    }
 }
 
 /* Lyrics to This Old Man
+
 
 This old man, he played one,
 He played knick-knack on my thumb;
