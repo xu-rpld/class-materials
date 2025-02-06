@@ -1,6 +1,21 @@
 fn main() {
     println!("This old man, he played one,\nBut he needs to play more!!");
+
+    let array = [
+    "on my thumb;", "on my shoe;", "on my knee;", "on my door;",
+    "on my hive;", "on my sticks;", "up in heaven;", "on my gate;",
+    "on my spine;", "once again;"
+];
+
+
+    for number in (1..10){
+        println!("This old man, he played {},", number);
+        println!("He played knick-knack {}", array[number - 1]);
+        println!("With a knick-knack paddywhack,\nGive the dog a bone,\nThis old man came rolling home.");
+    }
+
 }
+
 
 /* Lyrics to This Old Man
 
