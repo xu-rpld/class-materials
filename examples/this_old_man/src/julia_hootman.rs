@@ -1,6 +1,26 @@
 fn main() {
     println!("This old man, he played one,\nBut he needs to play more!!");
+
+    // create an array for numbers in line one
+    let number_array = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+
+    // create an array for numbers in line two
+    let lyric_array = ["on my thumb", "on my shoe", "on my knee", "on my door", "on my hive", "on my sticks", "up in heaven", "on my gate", "on my spine", "once again"];
+
+    // loops to create song
+
+    for num in 0..10 {
+            println!();
+            println!("This old man, he played {},", number_array[num]);
+            println!("He played knick-knack {};", lyric_array[num]);
+            println!("With a knick-knack paddywack,");
+            println!("Give the dog a bone,");
+            println!("This old man came rolling home.");
+            println!();
+    }
+
 }
+
 
 /* Lyrics to This Old Man
 
