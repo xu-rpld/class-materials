@@ -4,7 +4,7 @@ struct SprintTeam {
     name: String,
     spaces_remaining: u8,
 } 
-
+// hello - Simon
 fn main() {
     let students = [
         "Simon William Benjamin",
