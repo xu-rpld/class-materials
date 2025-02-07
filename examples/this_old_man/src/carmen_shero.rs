@@ -1,5 +1,15 @@
 fn main() {
-    println!("This old man, he played one,\nBut he needs to play more!!");
+    let numbers = [
+        "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"
+    ];
+
+    let nouns = [
+        "thumb", "shoe", "knee", "door", "hive", "sticks", "heaven", "gate", "spine", "once again"
+    ];
+    for i in 0..numbers.len(){
+        println!("This old man, he played {},\nHe played knick-knack on my {};\nWith a knick-knack paddywhack,\nGive the dog a bone,\nThis old man came rolling home.\n",
+            numbers[i], nouns[i]);
+    }
 }
 
 /* Lyrics to This Old Man
