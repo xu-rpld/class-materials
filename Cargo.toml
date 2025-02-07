@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "examples/sprint_teams",
+    "examples/this_old_man",
+]
