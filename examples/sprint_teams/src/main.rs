@@ -49,7 +49,9 @@ fn main() {
 
     let mut rng = rand::thread_rng();
 
-    for student in students {
+    let cool_guy = "Brian Donovan Matton";
+
+    for (index, student) in students.iter().enumerate() {
         loop {
             let random_number = rng.gen_range(0..teams.len());
             let team = &mut teams[random_number];
@@ -61,6 +63,12 @@ fn main() {
                     team.name,
                     team.spaces_remaining
                 );
+
+                if student == &cool_guy
+                {
+                    println!("That's a cool dude (who can't get this part to work for some reason).");
+                }
+
                 break;
             }
         }
