@@ -1,3 +1,4 @@
+// TODO: RTO-4
 use rand::Rng;
 
 struct SprintTeam {
@@ -31,22 +32,30 @@ fn main() {
   
     let sprint_team_a  = SprintTeam { 
         name: "Team A".to_string(), 
-        spaces_remaining: 7,
+        spaces_remaining: 5,
     };
 
     let sprint_team_b = SprintTeam { 
         name: "Team B".to_string(), 
-        spaces_remaining: 7,
+        spaces_remaining: 5,
     };
 
     let sprint_team_c = SprintTeam { 
         name: "Team C".to_string(), 
-        spaces_remaining: 6,
+        spaces_remaining: 5,
     };
 
-    let mut teams = [sprint_team_a, sprint_team_b, sprint_team_c];
+    let sprint_team_d = SprintTeam {
+        name: "Team D".to_string(),
+        spaces_remaining: 5,
+    };
+
+
+    let mut teams = [sprint_team_a, sprint_team_b, sprint_team_c, sprint_team_d];
+
 
     let mut rng = rand::thread_rng();
+    let mut count = 0;
 
     for student in students {
         loop {
@@ -60,7 +69,19 @@ fn main() {
                     team.name,
                     team.spaces_remaining
                 );
+                
+                if team.spaces_remaining == 1{
+                    println!("One Spot remaining on this team!")
+                }
+
+                count += 1;
+                if count < students.len(){
+                    println!("Next Student is...");
+                }
+ 
                 break;
+                
+
             }
         }
     }
