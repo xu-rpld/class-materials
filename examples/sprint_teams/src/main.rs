@@ -4,6 +4,7 @@ use rand::Rng;
 struct SprintTeam {
     name: String,
     spaces_remaining: u8,
+    members: Vec<String>, // A way to store the students
 } 
 
 fn main() {
@@ -33,16 +34,19 @@ fn main() {
     let sprint_team_a  = SprintTeam { 
         name: "Team A".to_string(), 
         spaces_remaining: 7,
+        members: Vec::new(), // empty list for Team A
     };
 
     let sprint_team_b = SprintTeam { 
         name: "Team B".to_string(), 
         spaces_remaining: 7,
+        members: Vec::new(), // empty list for Team  B
     };
 
     let sprint_team_c = SprintTeam { 
         name: "Team C".to_string(), 
         spaces_remaining: 6,
+        members: Vec::new(), // empty list for Team C
     };
 
     let mut teams = [sprint_team_a, sprint_team_b, sprint_team_c];
@@ -55,6 +59,7 @@ fn main() {
             let team = &mut teams[random_number];
             if team.spaces_remaining > 0 {
                 team.spaces_remaining -= 1;
+                team.members.push(student.to_string()); // Store the students in their respective teams
                 println!(
                     "Student: {:<25}  Team: {:<10}  Remaining Spaces: {}",
                     student,
