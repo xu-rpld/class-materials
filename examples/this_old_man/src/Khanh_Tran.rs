@@ -1,6 +1,23 @@
 fn main() {
     println!("This old man, he played one,\nBut he needs to play more!!");
+
+    let word_array = ["on my thumb", "on my shoe", "on my knee", "on my door", "on my hive", "on my sticks", "up in heaven", "on my gate", "on my spine", "once again"];
+
+    let mut nums = 1;
+    for num in 0..10{
+        println!("This old man, he played {nums},");
+        nums = nums + 1;
+        println!("He played knick-knack {};", word_array[num]);
+        println!("With a knick-knack paddywack,");
+        println!("Give the dog a bone,");
+        println!("This old man came rolling home.");
+        println!();
+    }
+
+
+
 }
+
 
 /* Lyrics to This Old Man
 
