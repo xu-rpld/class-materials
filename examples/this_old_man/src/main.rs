@@ -1,5 +1,30 @@
 fn main() {
-    println!("This old man, he played one,\nBut he needs to play more!!");
+    let first_line = "This old man, he played ";
+    let second_line = "He played knick-knack on my ";
+    let rest = "With a knick-knack paddywhack,\nGive the dog a bone,\nThis old man came rolling home.";
+    let mut i = 0;
+    let numbers = ["one", "two", "three", "four", "five", 
+        "six", "seven", "eight", "nine"];
+    let locations = ["thumb", "shoe", "knee", "door",
+        "hive", "sticks", "heaven", "gate", "spine"];
+
+    while i < 9 {
+        let mut val = first_line.to_owned();
+        let number = numbers[i];
+        val.push_str(number);
+        println!("{val},");
+
+        val = second_line.to_owned();
+        let location = locations[i];
+        val.push_str(location);
+        println!("{val};");
+        
+        println!("{rest}\n");
+        i = i + 1;
+    }
+    println!("This old man, he played ten");
+    println!("He played knick-knack once again");
+    println!("{rest}");
 }
 
 /* Lyrics to This Old Man
