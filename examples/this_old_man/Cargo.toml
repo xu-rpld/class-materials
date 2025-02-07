@@ -3,4 +3,6 @@ name = "this_old_man"
 version = "0.1.0"
 edition = "2021"
 
-[dependencies]
+[[bin]]
+name = "this_old_man"
+path = "src/jack_frambes.rs"
