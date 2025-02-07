@@ -1,5 +1,19 @@
 fn main() {
-    println!("This old man, he played one,\nBut he needs to play more!!");
+    let things = [
+        "thumb", "shoe", "knee", "door", "hive",
+        "sticks", "heaven", "gate", "spine", "once again"
+    ];
+
+    let spelled_number = [
+        "one", "two", "three", "four", "five",
+        "six", "seven", "eight", "nine", "ten"
+    ];
+
+    for num in 1..=10 {
+        println!("This old man, he played {},", spelled_number[num - 1]);
+        println!("He played knick-knack on my {};", things[num-1]);
+        println!("With a knick-knack paddywhack,\nGive the dog a bone,\nThis old man came rolling home.\n");
+    }
 }
 
 /* Lyrics to This Old Man
