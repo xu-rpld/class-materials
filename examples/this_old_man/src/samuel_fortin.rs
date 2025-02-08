@@ -1,5 +1,26 @@
 fn main() {
-    println!("This old man, he played one,\nBut he needs to play more!!");
+    //array holding the things that change between verses
+    let verses: [(&str, &str); 10] = [ 
+        ("one", "on my thumb"), 
+        ("two", "on my shoe"), 
+        ("three", "on my knee"), 
+        ("four", "on my door"),
+        ("five", "on my hive"),
+        ("six", "on my sticks"),
+        ("seven", "up in heaven"),
+        ("eight", "on my gate"),
+        ("nine", "on my spine"),
+        ("ten", "once again"),
+    ];
+
+    //loop running through the framework of the verses
+    for x in 0..10 {
+        println!("This old man, he played {},
+        He played knick-knack {};
+        With a knick-knack paddywhack,
+        Give the dog a bone,
+        This old man came rolling home.", verses[x].0, verses[x].1);
+    }
 }
 
 /* Lyrics to This Old Man
